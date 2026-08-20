@@ -1,0 +1,17 @@
+# .packit.yaml
+specfile_path: SkiaTestApp.spec
+files_to_sync:
+  - SkiaTestApp.spec
+  - .packit.yaml
+
+upstream_package_name: SkiaTestApp
+downstream_package_name: SkiaTestApp
+
+jobs:
+  - job: copr_build
+    trigger: release
+    targets:
+      - fedora-43-ppc64le
+      - fedora-44-ppc64le
+    owner: repobot
+    project: SkiaTest
